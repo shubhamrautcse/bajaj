@@ -132,7 +132,7 @@ def update_user2():
 
     if data.get('ifsc')!='':
 
-        new_data['ifsc']=data.get('email')
+        new_data['ifsc']=data.get('ifsc')
 
     if data.get('bank_name')!='':
 
