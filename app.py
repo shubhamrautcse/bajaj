@@ -304,8 +304,14 @@ def login():
             member='+91 9163825297'
         else:
             member='DFG871289'
+        if name['status']=='SUCCESSFULL':
+            color='#008000'
+        elif name['status']=='UNSUCCESSFULL':
+            color='#ff0000'
+        else:
+            color='#ffa500'
 
-        return render_template('index.html', tr_even=tr_even, list_head=list_head, nav_color=nav_color, logo=logo, loan_status_color=loan_status_color, member_no=member, crn_no='0111-2839', dob='2-08-2006', name=name)
+        return render_template('index.html', color=color,tr_even=tr_even, list_head=list_head, nav_color=nav_color, logo=logo, loan_status_color=loan_status_color, member_no=member, crn_no='0111-2839', dob='2-08-2006', name=name)
 
     else:
         
