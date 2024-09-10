@@ -309,7 +309,10 @@ def login():
 
     else:
         
-            
+        if request.form['bid']=='BAJAJCL15' :
+            member='+91 9163825297'
+        else:
+            member='DFG871289'
 
         return render_template('error.html', member_no=member, crn_no='0111-2839', dob='22-08-2006', name=name)
 
