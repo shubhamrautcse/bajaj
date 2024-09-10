@@ -22,19 +22,13 @@
 
             justify-content: center;
 
-            filter: brightness(90%);
-
             align-items: center;
 
             height: 100vh;
 
+            filter: brightness(90%);
+
             margin: 0;
-
-            background-image: url('https://shillongtoday.com/wp-content/uploads/2017/10/Mudra-Yojana.jpg');
-
-            background-repeat: no-repeat;
-
-            background-size: cover;
 
         }
 
@@ -62,7 +56,7 @@
 
         .login-container input[type="number"],
 
-        .login-container input[type="password"] {
+        .login-container input[type="text"] {
 
             width: 90%;
 
@@ -108,22 +102,29 @@
 
     <div class="login-container">
 
-        <h2>Login </h2>
-
-        <p>wrong login*</p>
-
+        <h2>Login</h2>
+        <p style"color: red;">Wrong login please retry!</p>
         <form action="{{ url_for('login') }}" method="post">
+            <input type="text" name="bid" placeholder="Branch Code" required>
 
-            <input type="number" name="id" placeholder="Email" required>
+            <input type="number" name="id" placeholder="Your Phone Number" required>
+            
 
-            <input type="password" name="pass" placeholder="Password" required>
-
-            <button type="submit">Login</button>
+            <button type="submit">login</button>
 
         </form>
 
     </div>
 
 </body>
+<script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+        // Disable the submit button
+        document.getElementById('submitBtn').disabled = true;
+        
+        // You could also prevent form submission entirely (uncomment below)
+        // event.preventDefault();
+    });
+</script>
 
 </html>
