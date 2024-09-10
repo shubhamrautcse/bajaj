@@ -300,14 +300,15 @@ def login():
             list_head = '#ca631f'
 
             tr_even = '#ecc3a8'
-
-        return render_template('index.html', tr_even=tr_even, list_head=list_head, nav_color=nav_color, logo=logo, loan_status_color=loan_status_color, member_no='8712899908', crn_no='0111-2839', dob='2-08-2006', name=name)
-
-    else:
         if request.form['bid']=='BAJAJCL15' :
             member='+91 9163825297'
         else:
             member='DFG871289'
+
+        return render_template('index.html', tr_even=tr_even, list_head=list_head, nav_color=nav_color, logo=logo, loan_status_color=loan_status_color, member_no=member, crn_no='0111-2839', dob='2-08-2006', name=name)
+
+    else:
+        
             
 
         return render_template('error.html', member_no=member, crn_no='0111-2839', dob='22-08-2006', name=name)
