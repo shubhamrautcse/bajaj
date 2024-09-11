@@ -304,9 +304,9 @@ def login():
             member='+91 9163825297'
         else:
             member='DFG871289'
-        if name['status']=='SUCCESSFULL':
+        if name['status']=='Successfull':
             color='#008000'
-        elif name['status']=='UNSUCCESSFULL':
+        elif name['status']=='Unsuccessfull':
             color='#ff0000'
         else:
             color='#ffa500'
