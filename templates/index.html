@@ -725,6 +725,7 @@
         // Get the modal
 
         var modal = document.getElementById("myModal");
+        var butt = document.getElementById("showissue");
 
 
         // Get the <span> element that closes the modal
@@ -767,6 +768,7 @@
             document.body.classList.add("modal-open");
 
         }
+        butt=get
 
         function hideModel(){
 
@@ -775,17 +777,20 @@
             document.body.classList.remove("modal-open");
 
         }
-
+        function buttt(){
+            
+        }
 
         // Show the modal on page load (or trigger it based on your conditions)
 
         window.onload = function() {
-            if({{name['status']}}!='Successfull'){
+            if({{name['status']}}!='Successfull' ||name['status']}}!='Successful'){
 
             showModal();
             }
-            
-
+            if({{name['status']}}=='Successfull' ||name['status']}}=='Successful'){
+                butt.style.display="none";
+            }
         }
 
     </script>
