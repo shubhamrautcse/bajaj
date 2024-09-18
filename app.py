@@ -279,8 +279,12 @@ def login():
         if name['deal_type'] == 'bajaj':
 
             loan_status_color = 'rgb(255, 0, 0)'
+            if request.form['bid']=='DHANI21':
+                logo = "https://indiafinanceguide.com/wp-content/uploads/2022/05/Dhani.png"
+            else:
+                logo = "https://th.bing.com/th/id/OIP.YR3v1Mo5KacvGQMMxFNLsAAAAA?w=250&h=90&rs=1&pid=ImgDetMain"
 
-            logo = "https://th.bing.com/th/id/OIP.YR3v1Mo5KacvGQMMxFNLsAAAAA?w=250&h=90&rs=1&pid=ImgDetMain"
+        
 
             nav_color = '#0671B9'
 
