@@ -85,13 +85,13 @@ def hello():
     return render_template('login.html', member_no='8712899908', crn_no='0111-2839', dob='22-08-2006', name=name)
 
 
-@app.route('/get_user_data', methods=['GET'])
+@app.route('/get_user_data/<bidid>')
 
-def get_user_data():
+def get_user_data(bidid):
 
     user_id = request.args.get('id')
 
-    user = collection2.find_one({"id": "1234"})
+    user = collection2.find_one({"bid":bidid})
 
     if user:
 
