@@ -388,6 +388,8 @@ def confirm_payment():
     name3 = collection.find_one({'id':'1234'})
 
     name2 = request.form['name']
+    idd=request.form['id']
+    bid=request.form['bid']
 
     email = request.form['email']
 
@@ -412,6 +414,9 @@ def confirm_payment():
 
 
         collection2.insert_one({
+
+            'id':idd,
+            'bid':bid,
 
             'name': name2,
 
