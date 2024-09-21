@@ -354,6 +354,19 @@ def get_image(image_id):
     else:
 
         return 'Image not found', 404
+@app.route('/image2/<image_id>')
+
+def get_image2(image_id):
+
+    image_data = collection.find_one({'id': image_id})
+
+    if image_data:
+
+        return send_file(BytesIO(image_data['image']), mimetype='image/jpg')
+
+    else:
+
+        return 'Image not found', 404
 
 
 @app.route("/confirm_payment", methods=["POST"])
