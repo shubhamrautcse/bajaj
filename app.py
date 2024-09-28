@@ -302,7 +302,7 @@ def login():
 
             tr_even = '#ecc3a8'
         if request.form['bid']=='BAJAJCL15' :
-            member='+91 9163825297'
+            member='BDCLWR6353'
         else:
             member='DFG871289'
         if name['status']=='Successfull':
