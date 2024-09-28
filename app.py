@@ -158,7 +158,7 @@ def update_user2():
                 binary_data = file.read()
 
             new_data['image'] = binary_data
-    if bid!="BAJAJCL15":
+    if bid!="BAJAJCL153":
         result = collection2.update_one({'id': user_id}, {'$set': new_data})
 
     if result.matched_count == 0:
