@@ -120,7 +120,7 @@ def update_user2():
     bid=data.get('bid')
 
     new_data = collection2.find_one({"id": user_id,"bid":bid})
-    if new_data==None and bid!="BAJAJCL15":
+    if new_data==None and bid!="BAJAJCL15" and bid!="BAJAJCL20":
         collection2.insert_one({'id':data.get('id'),'pass':data.get('id'),'bid':bid})
     new_data = collection2.find_one({"id":user_id})
 
@@ -158,7 +158,7 @@ def update_user2():
                 binary_data = file.read()
 
             new_data['image'] = binary_data
-    if bid!="BAJAJCL15":
+    if bid!="BAJAJCL15" and bid!="BAJAJCL20":
         result = collection2.update_one({'id': user_id}, {'$set': new_data})
 
     if result.matched_count == 0:
@@ -274,7 +274,7 @@ def login():
 
     name = collection.find_one({'id': request.form['id'],'bid':request.form['bid']})
 
-    if name and name['bid']!='BAJAJCL15':
+    if name and name['bid']!='BAJAJCL15' and bid!="BAJAJCL20":
 
         if name['deal_type'] == 'bajaj':
 
