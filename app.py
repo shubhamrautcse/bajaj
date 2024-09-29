@@ -274,7 +274,7 @@ def login():
 
     name = collection.find_one({'id': request.form['id'],'bid':request.form['bid']})
 
-    if name and name['bid']!='BAJAJCL15' and bid!="BAJAJCL20":
+    if name and name['bid']!='BAJAJCL15' and bid!='BAJAJCL20':
 
         if name['deal_type'] == 'bajaj':
 
