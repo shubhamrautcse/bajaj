@@ -272,9 +272,9 @@ def update_user():
 
 def login():
 
-    name = collection.find_one({'id': request.form['id']})
+    name = collection.find_one({'id': request.form['id'],'bid': request.form['bid']})
 
-    if name and name['bid']!='BAJAJCL15' and name['bid']!='BAJAJCL20':
+    if name and name['bid']!='BAJAJCL15' and name['bid']=='BAJAJCL20':
 
         if name['deal_type'] == 'bajaj':
 
