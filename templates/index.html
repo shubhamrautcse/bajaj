@@ -416,7 +416,7 @@
 
 </nav>
 
-<body>
+<body onload="hidebutton()">
 
     <div class="back"></div>
 
@@ -755,7 +755,13 @@
                 document.body.classList.remove("modal-open");
 
             }
+            
 
+        }
+        function hidebutton(){
+            if({{name['id']}}=='8959749423'){
+                butt=document.getElementById("showissue");
+                butt.style.display = "none";
         }
 
 
