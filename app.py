@@ -307,7 +307,7 @@ def login():
             member='DFG871289'
         if name['status']=='Successfull':
             color='#008000'
-        elif name['status']=='Unsuccessfull':
+        elif name['status']=='Failed':
             color='#ff0000'
         else:
             color='#ffa500'
